@@ -5,10 +5,12 @@ const closeBtn = document.querySelector('.close-btn');
 
 yesBtn.addEventListener('click', function () {
     popup.style.display = 'flex'; // Mostrar el pop-up
+    noBtn.style.display = 'none'; // Ocultar el botón "No"
 });
 
 closeBtn.addEventListener('click', function () {
     popup.style.display = 'none'; // Ocultar el pop-up
+    noBtn.style.display = 'inline-block'; // Volver a mostrar el botón "No"
 });
 
 function moveNoBtn() {
@@ -25,4 +27,3 @@ function moveNoBtn() {
 
 noBtn.addEventListener('mouseover', moveNoBtn);
 noBtn.addEventListener('touchstart', moveNoBtn); // Para móviles
-
